@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.10.4 on win32)" generated="20220414 03:55:11.877" rpa="false">
+<suite id="s1" name="CCWEB-002" source="C:\Users\qneil\git\cc-web-test002\CCWEB-002">
+<suite id="s1-s1" name="CCWEB Master" source="C:\Users\qneil\git\cc-web-test002\CCWEB-002\CCWEB_Master">
+<suite id="s1-s1-s1" name="CCWEB LoginPage" source="C:\Users\qneil\git\cc-web-test002\CCWEB-002\CCWEB_Master\CCWEB_LoginPage">
+<suite id="s1-s1-s1-s1" name="CCWEB LoginPage" source="C:\Users\qneil\git\cc-web-test002\CCWEB-002\CCWEB_Master\CCWEB_LoginPage\CCWEB_LoginPage.robot">
+<test id="s1-s1-s1-s1-t1" name="Verify Login Page Response Time">
+<kw name="Open CC Website" library="CCWEB_Global_Keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>options=add_argument("--ignore-certificate-errors")</arg>
+</arguments>
+<msg timestamp="20220414 03:55:12.380" level="INFO">Opening browser 'chrome' to base url 'https://www.canadacomputers.com/'.</msg>
+<status status="PASS" starttime="20220414 03:55:12.379" endtime="20220414 03:56:00.537"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>1920</arg>
+<arg>1080</arg>
+</arguments>
+<status status="PASS" starttime="20220414 03:56:00.538" endtime="20220414 03:56:00.683"></status>
+</kw>
+<kw name="Accept Cookies" library="CCWEB_Global_Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CCWEB_AcceptCookies}</arg>
+</arguments>
+<msg timestamp="20220414 03:56:00.685" level="INFO">Clicking element '//*[@id="privacy-btn"]'.</msg>
+<msg timestamp="20220414 03:56:00.876" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220414 03:56:00.884" level="FAIL">Element with locator '//*[@id="privacy-btn"]' not found.</msg>
+<status status="FAIL" starttime="20220414 03:56:00.684" endtime="20220414 03:56:00.885"></status>
+</kw>
+<status status="FAIL" starttime="20220414 03:56:00.683" endtime="20220414 03:56:00.885"></status>
+</kw>
+<status status="FAIL" starttime="20220414 03:55:12.378" endtime="20220414 03:56:00.886"></status>
+</kw>
+<status status="FAIL" starttime="20220414 03:55:12.377" endtime="20220414 03:56:00.886" critical="yes">Element with locator '//*[@id="privacy-btn"]' not found.</status>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Verify If The User Cannot Login Using Incorrect Password">
+<kw name="Login To CC Website Invalid" library="CCWEB_Global_Keywords">
+<arguments>
+<arg>${login_email}</arg>
+<arg>${login_pw_inc}</arg>
+<arg>${login_username}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.randint(5, 11)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${wait1}</var>
+</assign>
+<msg timestamp="20220414 03:56:00.890" level="INFO">${wait1} = 11</msg>
+<status status="PASS" starttime="20220414 03:56:00.889" endtime="20220414 03:56:00.890"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.randint(5, 11)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${wait2}</var>
+</assign>
+<msg timestamp="20220414 03:56:00.891" level="INFO">${wait2} = 10</msg>
+<status status="PASS" starttime="20220414 03:56:00.891" endtime="20220414 03:56:00.891"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.randint(5, 11)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${wait3}</var>
+</assign>
+<msg timestamp="20220414 03:56:00.893" level="INFO">${wait3} = 11</msg>
+<status status="PASS" starttime="20220414 03:56:00.892" endtime="20220414 03:56:00.894"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.randint(5, 11)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${wait4}</var>
+</assign>
+<msg timestamp="20220414 03:56:00.896" level="INFO">${wait4} = 7</msg>
+<status status="PASS" starttime="20220414 03:56:00.895" endtime="20220414 03:56:00.896"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CCWEB_LoginLink}</arg>
+</arguments>
+<msg timestamp="20220414 03:56:00.897" level="INFO">Clicking element '//*[@id="header-search"]/div/div[3]/div/div[1]/a'.</msg>
+<msg timestamp="20220414 03:56:01.077" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220414 03:56:01.079" level="FAIL">Element with locator '//*[@id="header-search"]/div/div[3]/div/div[1]/a' not found.</msg>
+<status status="FAIL" starttime="20220414 03:56:00.896" endtime="20220414 03:56:01.079"></status>
+</kw>
+<status status="FAIL" starttime="20220414 03:56:00.888" endtime="20220414 03:56:01.080"></status>
+</kw>
+<status status="FAIL" starttime="20220414 03:56:00.887" endtime="20220414 03:56:01.081" critical="yes">Element with locator '//*[@id="header-search"]/div/div[3]/div/div[1]/a' not found.</status>
+</test>
+<test id="s1-s1-s1-s1-t3" name="Verify If The User Can Login Using Correct Email">
+<kw name="Login To CC Website" library="CCWEB_Global_Keywords">
+<arguments>
+<arg>${login_email}</arg>
+<arg>${login_pw}</arg>
+<arg>${login_username}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.randint(5, 11)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${wait1}</var>
+</assign>
+<msg timestamp="20220414 03:56:01.085" level="INFO">${wait1} = 10</msg>
+<status status="PASS" starttime="20220414 03:56:01.084" endtime="20220414 03:56:01.085"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.randint(5, 11)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${wait2}</var>
+</assign>
+<msg timestamp="20220414 03:56:01.087" level="INFO">${wait2} = 9</msg>
+<status status="PASS" starttime="20220414 03:56:01.086" endtime="20220414 03:56:01.087"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.randint(5, 11)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${wait3}</var>
+</assign>
+<msg timestamp="20220414 03:56:01.088" level="INFO">${wait3} = 11</msg>
+<status status="PASS" starttime="20220414 03:56:01.087" endtime="20220414 03:56:01.088"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.randint(5, 11)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${wait4}</var>
+</assign>
+<msg timestamp="20220414 03:56:01.089" level="INFO">${wait4} = 7</msg>
+<status status="PASS" starttime="20220414 03:56:01.089" endtime="20220414 03:56:01.090"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CCWEB_LoginLink}</arg>
+</arguments>
+<msg timestamp="20220414 03:56:01.091" level="INFO">Clicking element '//*[@id="header-search"]/div/div[3]/div/div[1]/a'.</msg>
+<msg timestamp="20220414 03:56:01.249" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220414 03:56:01.251" level="FAIL">Element with locator '//*[@id="header-search"]/div/div[3]/div/div[1]/a' not found.</msg>
+<status status="FAIL" starttime="20220414 03:56:01.090" endtime="20220414 03:56:01.252"></status>
+</kw>
+<status status="FAIL" starttime="20220414 03:56:01.083" endtime="20220414 03:56:01.252"></status>
+</kw>
+<status status="FAIL" starttime="20220414 03:56:01.082" endtime="20220414 03:56:01.253" critical="yes">Element with locator '//*[@id="header-search"]/div/div[3]/div/div[1]/a' not found.</status>
+</test>
+<status status="FAIL" starttime="20220414 03:55:12.004" endtime="20220414 03:56:01.255"></status>
+</suite>
+<status status="FAIL" starttime="20220414 03:55:11.997" endtime="20220414 03:56:01.264"></status>
+</suite>
+<suite id="s1-s1-s2" name="CCWEB MyAccount" source="C:\Users\qneil\git\cc-web-test002\CCWEB-002\CCWEB_Master\CCWEB_MyAccount">
+<suite id="s1-s1-s2-s1" name="CCWEB MyAccount" source="C:\Users\qneil\git\cc-web-test002\CCWEB-002\CCWEB_Master\CCWEB_MyAccount\CCWEB_MyAccount.robot">
+<test id="s1-s1-s2-s1-t1" name="Verify MyAccount Page Response Time">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MyAccount_DigitalCard}</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20220414 03:56:06.519" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220414 03:56:06.521" level="FAIL">Element '//*[@id="barcode2"]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220414 03:56:01.304" endtime="20220414 03:56:06.522"></status>
+</kw>
+<status status="FAIL" starttime="20220414 03:56:01.303" endtime="20220414 03:56:06.522" critical="yes">Element '//*[@id="barcode2"]' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s1-s2-s1-t2" name="Verify If Your Orders Is Visible in My Account">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MyAccount_OrderHistory}</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20220414 03:56:11.776" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220414 03:56:11.777" level="FAIL">Element '//*[@id="profile"]/div[3]/div[1]/div/div[2]/a/span' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220414 03:56:06.525" endtime="20220414 03:56:11.778"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20220414 03:56:06.523" endtime="20220414 03:56:11.778" critical="yes">Element '//*[@id="profile"]/div[3]/div[1]/div/div[2]/a/span' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s1-s2-s1-t3" name="Verify If Wishlist Is Visible in My Account">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MyAccount_Wishlist}</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20220414 03:56:17.050" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220414 03:56:17.052" level="FAIL">Element '//*[@id="profile"]/div[3]/div[2]/div/div[2]/a/span' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220414 03:56:11.783" endtime="20220414 03:56:17.053"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20220414 03:56:11.780" endtime="20220414 03:56:17.053" critical="yes">Element '//*[@id="profile"]/div[3]/div[2]/div/div[2]/a/span' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s1-s2-s1-t4" name="Verify If Your Tickets Is Visible in My Account">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MyAccount_Wishlist}</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20220414 03:56:43.880" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<msg timestamp="20220414 03:56:43.886" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<status status="FAIL" starttime="20220414 03:56:17.056" endtime="20220414 03:56:43.887"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20220414 03:56:17.055" endtime="20220414 03:56:43.888" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</status>
+</test>
+<test id="s1-s1-s2-s1-t5" name="Verify If Unsubscribe to Newsletter Is Visible in My Account">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MyAccount_Wishlist}</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20220414 03:57:08.195" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<msg timestamp="20220414 03:57:08.198" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<status status="FAIL" starttime="20220414 03:56:43.890" endtime="20220414 03:57:08.199"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20220414 03:56:43.888" endtime="20220414 03:57:08.199" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</status>
+</test>
+<test id="s1-s1-s2-s1-t6" name="Verify If Address Book Is Visible in My Account">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MyAccount_Wishlist}</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20220414 03:57:32.540" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<msg timestamp="20220414 03:57:32.543" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<status status="FAIL" starttime="20220414 03:57:08.201" endtime="20220414 03:57:32.543"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20220414 03:57:08.200" endtime="20220414 03:57:32.544" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</status>
+</test>
+<test id="s1-s1-s2-s1-t7" name="Verify If Account Information Is Visible in My Account">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MyAccount_Wishlist}</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20220414 03:57:56.911" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<msg timestamp="20220414 03:57:56.914" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<status status="FAIL" starttime="20220414 03:57:32.546" endtime="20220414 03:57:56.914"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20220414 03:57:32.545" endtime="20220414 03:57:56.915" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</status>
+</test>
+<test id="s1-s1-s2-s1-t8" name="Verify If Reset Password Is Visible in My Account">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MyAccount_Wishlist}</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20220414 03:58:21.314" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<msg timestamp="20220414 03:58:21.317" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<status status="FAIL" starttime="20220414 03:57:56.917" endtime="20220414 03:58:21.318"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20220414 03:57:56.916" endtime="20220414 03:58:21.318" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</status>
+</test>
+<test id="s1-s1-s2-s1-t9" name="Verify If Digital Member Card Is Visible in My Account">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MyAccount_DigitalCard}</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20220414 03:58:45.710" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<msg timestamp="20220414 03:58:45.713" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<status status="FAIL" starttime="20220414 03:58:21.320" endtime="20220414 03:58:45.713"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20220414 03:58:21.319" endtime="20220414 03:58:45.714" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20220414 03:56:01.275" endtime="20220414 03:58:45.716"></status>
+</suite>
+<status status="FAIL" starttime="20220414 03:56:01.269" endtime="20220414 03:58:45.728"></status>
+</suite>
+<status status="FAIL" starttime="20220414 03:55:11.990" endtime="20220414 03:58:45.737"></status>
+</suite>
+<status status="FAIL" starttime="20220414 03:55:11.941" endtime="20220414 03:58:45.746"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="12">Critical Tests</stat>
+<stat pass="0" fail="12">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="8">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="12" id="s1" name="CCWEB-002">CCWEB-002</stat>
+<stat pass="0" fail="12" id="s1-s1" name="CCWEB Master">CCWEB-002.CCWEB Master</stat>
+<stat pass="0" fail="3" id="s1-s1-s1" name="CCWEB LoginPage">CCWEB-002.CCWEB Master.CCWEB LoginPage</stat>
+<stat pass="0" fail="3" id="s1-s1-s1-s1" name="CCWEB LoginPage">CCWEB-002.CCWEB Master.CCWEB LoginPage.CCWEB LoginPage</stat>
+<stat pass="0" fail="9" id="s1-s1-s2" name="CCWEB MyAccount">CCWEB-002.CCWEB Master.CCWEB MyAccount</stat>
+<stat pass="0" fail="9" id="s1-s1-s2-s1" name="CCWEB MyAccount">CCWEB-002.CCWEB Master.CCWEB MyAccount.CCWEB MyAccount</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220414 03:55:12.374" level="WARN">Imported resource file 'C:\Users\qneil\git\cc-web-test002\CCWEB-002\CCWEB_Master\CCWEB_LoginPage\LoginPage_Variables.resource' is empty.</msg>
+<msg timestamp="20220414 03:56:01.299" level="WARN">Imported resource file 'C:\Users\qneil\git\cc-web-test002\CCWEB-002\CCWEB_Master\CCWEB_MyAccount\MyAccount_Keywords.resource' is empty.</msg>
+<msg timestamp="20220414 03:56:43.880" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<msg timestamp="20220414 03:57:08.195" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<msg timestamp="20220414 03:57:32.540" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<msg timestamp="20220414 03:57:56.911" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<msg timestamp="20220414 03:58:21.314" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+<msg timestamp="20220414 03:58:45.710" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00409943+2595139]
+	Ordinal0 [0x0039C9F1+2148849]
+	Ordinal0 [0x002943F0+1065968]
+	Ordinal0 [0x002887C2+1017794]
+	Ordinal0 [0x00288FF8+1019896]
+	Ordinal0 [0x0028A892+1026194]
+	Ordinal0 [0x00284219+999961]
+	Ordinal0 [0x00295860+1071200]
+	Ordinal0 [0x002EB2D2+1422034]
+	Ordinal0 [0x002DB806+1357830]
+	Ordinal0 [0x002B6086+1204358]
+	Ordinal0 [0x002B6F96+1208214]
+	GetHandleVerifier [0x005AB232+1658114]
+	GetHandleVerifier [0x0066312C+2411516]
+	GetHandleVerifier [0x0049F261+560433]
+	GetHandleVerifier [0x0049E366+556598]
+	Ordinal0 [0x003A286B+2173035]
+	Ordinal0 [0x003A75F8+2192888]
+	Ordinal0 [0x003A76E5+2193125]
+	Ordinal0 [0x003B11FC+2232828]
+	BaseThreadInitThunk [0x776DFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77AA7A4E+238]
+</msg>
+</errors>
+</robot>
